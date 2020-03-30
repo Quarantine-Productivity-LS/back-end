@@ -14,7 +14,7 @@ function findTasks () {
 
 function findTaskById (id) {
   return db('tasks')
-    .select('taskName', 'description', 'duration')
+    .select('id', 'taskName', 'description', 'duration')
     .where({ id })
     .first()
 }
