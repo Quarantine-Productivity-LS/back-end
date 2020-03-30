@@ -13,6 +13,19 @@ router.get('/', (req, res) => {
     })
 })
 
+//get a user by id
+router.get('/:id', (req, res) => {
+  const { id } = req.params
+
+  Users.findUserById(id)
+    .then(user => {
+      res.status(200).json(user)
+    })
+    .catch(({ name, message, stack }) =>
+      res.status(500).json({ name, message, stack })
+    )
+})
+
 //delete a user
 router.delete('/:id', (req, res) => {
   const { id } = req.params
