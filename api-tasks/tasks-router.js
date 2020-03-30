@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 //get task by id
 router.get('/:id', (req, res) => {
-  Tasks.findTaskById()
+  Tasks.findTaskById(req.params.id)
     .then(task => {
       res.status(200).json(task)
     })
