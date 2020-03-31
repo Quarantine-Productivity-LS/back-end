@@ -6,7 +6,13 @@ exports.up = function (knex) {
 
     tbl.string('description', 1000)
 
-    tbl.string('duration', 120)
+    tbl.string('tags', 1000)
+
+    tbl.string('due', 128)
+
+    tbl.integer('duration', 1000)
+
+    tbl.boolean('completed', 128).defaultTo(false)
   })
 }
 

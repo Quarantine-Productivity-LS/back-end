@@ -2,7 +2,7 @@
 exports.seed = function(knex) {
   return knex('users').insert([
     {
-      username: "admin",
+      username: "testing",
       password: "pass"
     }
   ]);
