@@ -6,7 +6,7 @@ exports.up = function (knex) {
 
     tbl.string('description', 1000)
 
-    tbl.string('tags', 1000).defaultTo([])
+    tbl.string('tags', 1000)
 
     tbl.string('due', 128)
 
